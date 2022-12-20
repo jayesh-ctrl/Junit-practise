@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- 
+    <bean id="student1" class="com.springcore.Student" p:studentId="2344" p:studentName="Ansh Gupta" p:studentAddress="Delhi India" />
+    <bean id="student2" class="com.springcore.Student" p:studentId="4321" p:studentName="Jai Singh" p:studentAddress="Patna Bihar india" />
+    <bean id="emp1" class="com.springcore.collections.Emp">
+    	<property name="name" value="Radhe" />
+    	<property name="phones">
+    		<list>
+    			<value>123456789</value>
+    			<value>0987654321</value>
+    			<value>348765123</value>
+    			<null/>
+    		</list>
+    	</property>
+    	<property name="addresses">
+    		<set>
+    			<value>Bapu Nagar Jaipur</value>
+    			<value>Vaishali Nagar Jaipur Rajasthan</value>
+    			<value>Jaipur Centre</value>
+    		</set>
+    	</property>
+    	<property name="courses">
+    		<map>
+    			<entry key="B.Tech." value="Computer Science and Engineering" />
+    			<entry key="MBA" value="Finance" />
+    		</map>
+    	</property>
+    	<property name="props">
+    		<props>
+    			<prop key="Jayesh Gupta">M.Tech.</prop>
+    			<prop key="Mail">jaigupta2210@gmail.com</prop>
+    		</props>
+    	</property>
+    </bean>
+    
+    <bean class="com.springcore.ref.B" id="BObject">
+    	<property name="y" value="100" />
+    </bean> -->
+    
+   <!--  <bean class="com.springcore.ref.A" id="AObject">
+    	<property name="x" value="45" />
+    	<property name="obj" ref="BObject" />   
+    </bean> 
+    --> 
+    
+    <!-- 
+    <bean class="com.springcore.ref.A" id="AObject" p:x="23455" p:obj-ref="BObject" />
+    -->
+    
+    <!-- 
+    <bean class="com.springcore.ci.Certi" id="certificate">
+    	<constructor-arg value="Manan Dwivedi" />
+    </bean> -->
+    
+    <!--  <bean class="com.springcore.ci.Person" id="person1" c:name="Jai" c:personId="6789" c:certi-ref="certificate"></bean> -->
+    
+  <!--  <bean class="com.springcore.ci.Person" id="person1">
+    	<constructor-arg value="Manan" />
+    	<constructor-arg value="12345" />
+    	<constructor-arg ref="certificate" />
+    	<constructor-arg>
+    		<list>
+    			<value>Pune</value>
+    			<value>Bhopal</value>
+    			<value>Mumbai</value>
+    		</list>
+    	</constructor-arg>
+    	
+    </bean> -->
+    
+  <!--   <bean class="com.springcore.ci.Addition" id="addition">
+    	<constructor-arg value="12" type="int" index="1" />
+    	<constructor-arg value="45" type="int" index="0" />
+    </bean> -->
+    
+  <!--   <bean class="com.springcore.lifecycle.Samosa" id="s1" init-method="init" destroy-method="destroy">
+    	<property name="price" value="10.89" />
+    </bean>  -->
+    
+   <!--  <bean class="com.springcore.lifecycle.Pepsi" id="p1">
+    	<property name="price" value="50" />
+    </bean>  -->
+    
+   	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+   	    
+    <bean class="com.springcore.lifecycle.Annotation" id="annotation">
+    	<property name="subject" value="Java" />
+    </bean> --> 
+    
+    
+    
+    <!-- <bean class="com.springcore.auto.wire.Address" id="address1">
+    	<property name="city" value="Jhalawar Rajasthan" />
+    	<property name="street" value="Gali No 4-5" />
+    </bean>
+    
+     <bean class="com.springcore.auto.wire.Address" id="address2">
+    	<property name="city" value="Kota Rajasthan" />
+    	<property name="street" value="Second Street" />
+    </bean>
+    
+    <bean class="com.springcore.auto.wire.Employee" id="employee" autowire="constructor" /> -->
+    
+    
+	<!-- <context:annotation-config />
+    
+     <bean class="com.springcore.auto.wire.annotation.Address" id="tempAddress">
+    	<property name="city" value="Bakani Jhalawar Rajasthan" />
+    	<property name="street" value="Annotation @Autowired_new" />
+    </bean>
+    
+    <bean class="com.springcore.auto.wire.annotation.Address" id="tempAddress1">
+    	<property name="city" value="Kanpur U.P." />
+    	<property name="street" value="Sanklap tower Jaipur Rajasthan" />
+    </bean>
+    
+    <bean class="com.springcore.auto.wire.annotation.Employee" id="employee" /> -->
+
+    <util:list list-class="java.util.Vector" id="myBestFriends">
+    		<value>Aman</value>
+    		<value>Manan</value>
+    		<value>Charu Singh</value>
+    </util:list> 
+    
+    <util:map map-class="java.util.TreeMap" id="fees">
+    	<entry key="Spring framework" value="8000" />
+    	<entry key="Django Framework" value="5000" />
+    	<entry key="Hibernate Framework" value="2000" />
+    </util:map>    
+    
+    <util:properties id="dbconfig">
+    	<prop key="driver">com.mysql.jdbc.Driver</prop>
+    	<prop key="username">Jayesh Gupta</prop>
+    	<prop key="password">Durgesh098$%^</prop>
+    	<prop key="url">mysql.:jdbc://localhost:3306/database</prop>
+    </util:properties>
+    
+    <bean class="com.springcore.standalone.collections.Person" id="person">
+    	<!-- <property name="friends">
+    		<ref bean="myBestFriends" />
+    	</property>  -->
+    	
+    	<property name="friends" ref="myBestFriends" />
+    	<property name="feeStructure" ref="fees" />
+    	<property name="properties" ref="dbconfig"></property>
+    </bean>
+    
+    
+    
+    <context:component-scan base-package="com.springcore.stereotype" />
+    
+    <util:list list-class="java.util.ArrayList" id="temp">
+    	<value>Delhi</value>
+    	<value>Kanpur</value>
+    </util:list>
+    
+   
+</beans>
